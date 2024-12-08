@@ -377,6 +377,7 @@
 
   // Ajax Contact Form JS
 // Ajax Contact Form JS
+/**
 var form = $('#contact-form');
 var formMessages = $('.form-message');
 
@@ -421,6 +422,7 @@ $(form).submit(function(e) {
     }
   });
 });
+**/
 
 
   // Reveal JS
