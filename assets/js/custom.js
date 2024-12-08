@@ -520,12 +520,12 @@ $(document).ready(function () {
     "56.jpeg", "57.jpeg", "58.jpeg"
   ],
     'magazine': [
-  '1.jpeg', '2.JPEG', '3.jpeg', '4.jpeg', '5.jpeg', '6.jpeg', '7.png', '8.JPG', '9.PNG', '10.JPEG', '11.jpg', '12.jpeg', '13.png','14.png'
+  '1.jpeg', '2.JPEG', '3.jpeg', '4.jpeg', '5.jpeg', '6.jpeg', '7.png', '8.JPG', '9.PNG', '10.JPEG', '11.jpg', '12.jpeg', '13.PNG','14.PNG'
 ],
 'jewellery': [
-    "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.png", "9.png", "10.png", "11.png", "12.png",
-    "13.png", "14.png", "15.png", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg", "21.jpg", "22.jpg", "23.png", 
-    "24.png", "25.png", "26.jpg", "27.jpg", "28.jpg", "29.jpg", "30.jpg", "31.jpg", "32.jpg", "33.jpg", "34.jpg", 
+    "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.PNG", "9.PNG", "10.PNG", "11.PNG", "12.PNG",
+    "13.PNG", "14.PNG", "15.PNG", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg", "21.jpg", "22.jpg", "23.PNG", 
+    "24.PNG", "25.PNG", "26.jpg", "27.jpg", "28.jpg", "29.jpg", "30.jpg", "31.jpg", "32.jpg", "33.jpg", "34.jpg", 
     "35.jpg", "36.jpg", "37.jpg", "38.jpg", "39.jpg", "40.jpg", "41.jpg", "42.jpg", "43.jpg", "44.jpg", "45.jpg", 
     "46.jpg", "47.jpg", "48.jpg", "49.jpg", "50.jpg", "51.jpg", "52.jpg", "53.jpg", "54.jpg", "55.jpg"
   ],
@@ -540,7 +540,7 @@ $(document).ready(function () {
   ],
   "product": [
     "1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg", "6.jpeg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", 
-    "11.jpg", "12.jpg", "13.jpeg", "14.jpeg", "15.jpeg", "16.jpg", "17.jpg", "18.jpg", "19.jpg"
+    "11.jpg", "12.jpg", "13.jpeg", "14.JPEG", "15.JPEG", "16.JPG", "17.JPG", "18.JPG", "19.JPG"
   ]
 
 
