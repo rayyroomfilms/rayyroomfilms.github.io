@@ -105,7 +105,7 @@
       loop: true,
       speed: 500,
       spaceBetween : 0,
-      preloadImages: false,
+      preloadImages: true,
       effect: 'cube',
       grabCursor: true,
       cubeEffect: {
