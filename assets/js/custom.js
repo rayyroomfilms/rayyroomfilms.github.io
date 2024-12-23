@@ -105,6 +105,7 @@
       loop: true,
       speed: 500,
       spaceBetween : 0,
+      preloadImages: false,
       effect: 'cube',
       grabCursor: true,
       cubeEffect: {
@@ -163,6 +164,7 @@
   // Brand Logo Slider Js
     var swiper = new Swiper('.portfolio-slider-container', {
       loop: true,
+      preloadImages: true,
       autoplay: {
         delay: 8000,
         disableOnInteraction: false
