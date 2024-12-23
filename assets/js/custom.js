@@ -103,7 +103,6 @@
       slidesPerView : 1,
       slidesPerGroup: 1,
       loop: true,
-      lazyPreloadPrevNext: true,
       speed: 500,
       spaceBetween : 0,
       effect: 'cube',
@@ -136,7 +135,6 @@
       slidesPerView : 1,
       slidesPerGroup: 1,
       loop: true,
-      lazyPreloadPrevNext: true,
       speed: 900,
       spaceBetween : 0,
       mousewheel: true,
@@ -165,7 +163,6 @@
         delay: 8000,
         disableOnInteraction: false
       },
-      lazyPreloadPrevNext: true,
       slidesPerGroup: 1,
       speed: 500,
       navigation: {
@@ -196,7 +193,6 @@
       lope: true,
       slidesPerGroup: 1,
       speed: 500,
-      lazyPreloadPrevNext: true,
       breakpoints: {
         1200: {
           slidesPerView : 6,
@@ -228,7 +224,6 @@
       },
       slidesPerGroup: 1,
       slidesPerView : 1,
-      lazyPreloadPrevNext: true,
       spaceBetween: 30,
       speed: 600,
       pagination: {
@@ -243,7 +238,6 @@
         delay: 4000,
       },
       lope: true,
-      lazyPreloadPrevNext: true,
       slidesPerGroup: 1,
       speed: 500,
       breakpoints: {
@@ -273,7 +267,6 @@
       },
       lope: true,
       slidesPerGroup: 1,
-      lazyPreloadPrevNext: true,
       spaceBetween: 30,
       speed: 500,
       breakpoints: {
@@ -294,7 +287,6 @@
       slidesPerGroup: 1,
       slidesPerView : 1,
       lope: true,
-      lazyPreloadPrevNext: true,
       spaceBetween: 30,
       speed: 600,
       navigation: {
