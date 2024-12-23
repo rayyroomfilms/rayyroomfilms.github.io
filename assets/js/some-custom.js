@@ -1,9 +1,18 @@
 // Background Image Js
 const bgSelector = $("[data-bg-img]");
+
 bgSelector.each(function (index, elem) {
   let element = $(elem),
-    bgSource = element.data('bg-img');
-  element.css('background-image', 'url(' + bgSource + ')');
+      bgSource = element.data('bg-img');
+
+  // Preload the background image
+  let img = new Image();
+  img.src = bgSource;
+
+  // Once the image is loaded, set it as the background
+  img.onload = function() {
+    element.css('background-image', 'url(' + bgSource + ')');
+  }
 });
 
 // Background Color Js
