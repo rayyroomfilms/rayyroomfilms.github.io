@@ -125,11 +125,15 @@
         clickable: 'true',
       },
     });
-    $(".default-slider-container").hover(function() {
-      (this).swiper.autoplay.stop();
-    }, function() {
-      (this).swiper.autoplay.start();
-    });
+    $(".default-slider-container").hover(
+      function() {
+        carouselSlider.autoplay.stop();
+      },
+      function() {
+        carouselSlider.autoplay.start();
+      }
+    );
+    
 
     var carouselSlider2 = new Swiper('.default-slider2-container', {
       slidesPerView : 1,
