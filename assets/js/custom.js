@@ -350,8 +350,7 @@
 
   // Aos Js
   AOS.init({
-    once: true,
-    duration: 5,
+    duration: 1000,
   });
 
   // Svg Icon Js 
