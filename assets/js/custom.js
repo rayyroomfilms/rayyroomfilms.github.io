@@ -348,10 +348,7 @@
       // Element jarallax Parallax
   });
 
-  // Aos Js
-  AOS.init({
-    duration: 1000,
-  });
+
 
   // Svg Icon Js 
   var $svgIconBox = $('.svg-icon-style');
