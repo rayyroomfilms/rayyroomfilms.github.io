@@ -10331,3 +10331,74 @@ section .container-fluid {
 .footer-area.footer-style2-area .footer-bottom .copyright a:hover {
   color: #ff631b;
 }
+
+/* Custom styles for 4-column portfolio layout - More specific selectors */
+.portfolio-area.portfolio-default-area .container {
+  max-width: 1500px !important; /* Increased from default to accommodate 4 columns */
+}
+
+/* Ensure portfolio items maintain good proportions in 4-column layout */
+@media (min-width: 992px) {
+  .portfolio-area .row-cols-lg-4 .col {
+    flex: 0 0 auto !important;
+    width: 24% !important; /* Equal width for 4 columns */
+    margin-right: 1.33% !important; /* Small margin between items */
+  }
+
+  .portfolio-area .row-cols-lg-4 .col:nth-child(4n) {
+    margin-right: 0 !important; /* Remove margin from every 4th item */
+  }
+
+  /* Make portfolio items have consistent sizing */
+  .portfolio-area .portfolio-item .portfolio-thumb {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* Creates a perfect square aspect ratio */
+    position: relative;
+    overflow: hidden;
+  }
+  .portfolio-area .portfolio-item .portfolio-thumb img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Makes images cover the entire container */
+    object-position: center center !important; /* Centers the image */
+  }
+
+  /* Make portfolio items themselves larger */
+  .portfolio-area .row-cols-lg-4 .portfolio-item {
+    transform: scale(1.1); /* Scale up the portfolio items */
+    transition: transform 0.3s ease;
+  }
+
+  .portfolio-area .row-cols-lg-4 .portfolio-item:hover {
+    transform: scale(1.15); /* Slightly larger on hover */
+  }
+}
+
+/* For extra large screens, make container even wider */
+@media (min-width: 1400px) {
+  .portfolio-area.portfolio-default-area .container {
+    max-width: 1700px !important;
+  }
+}
+
+/* For very large screens */
+@media (min-width: 1600px) {
+  .portfolio-area.portfolio-default-area .container {
+    max-width: 1900px !important;
+  }
+}
+
+/* Maintain responsive behavior on smaller screens */
+@media (max-width: 991px) {
+  .portfolio-area.portfolio-default-area .container {
+    max-width: 100% !important;
+  }
+
+  .portfolio-area .portfolio-item {
+    transform: none !important; /* Reset scaling on mobile */
+  }
+}

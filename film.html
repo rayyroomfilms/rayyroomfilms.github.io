@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,10 +40,75 @@
     <!--== Slicknav Min CSS ==-->
     <link href="assets/css/slicknav.css" rel="stylesheet" />
     <!--== Aos Min CSS ==-->
-    <link href="assets/css/aos.min.css" rel="stylesheet" />
-
-    <!--== Main Style CSS ==-->
+    <link href="assets/css/aos.min.css" rel="stylesheet" />    <!--== Main Style CSS ==-->
     <link href="assets/css/style.css" rel="stylesheet" />
+
+    <style>      .video-container {
+        position: relative;
+        width: 85%;
+        margin: 60px auto;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #000;
+      }
+      .portfolio-video {
+        width: 100%;
+        height: 580px;
+        display: block;
+        border: none;
+      }
+      .thumbnail-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.3s ease;
+      }
+      .play-button {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+      .play-button i {
+        color: #fff;
+        font-size: 36px;
+        margin-left: 8px; /* Offset for play icon */
+      }
+      .thumbnail-overlay:hover .play-button {
+        background-color: rgba(255, 255, 255, 0.4);
+        transform: scale(1.1);
+      }      .video-info {
+        padding: 25px 30px;
+        background-color: #f2f2f2;
+        text-align: center;
+        border-top: 1px solid #e5e5e5;
+      }
+      .video-info h3 {
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 22px;
+        color: #333;
+      }
+      .video-info p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    </style>
 
     <!--[if lt IE 9]>
     <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -55,7 +119,7 @@
 <body>
 
 <!--wrapper start-->
-<div class="wrapper service-page-wrapper">
+<div class="wrapper portfolio-page-wrapper">
 
   <!--== Start Preloader Content ==-->
   <div class="preloader-wrap">
@@ -69,24 +133,21 @@
     </div>
   </div>
   <!--== End Preloader Content ==-->
-
-  <!--== Start Header Wrapper ==-->
-  <header class="header-area header-default">
+ <!--== Start Header Wrapper ==-->
+ <header class="header-area header-default">
     <div class="container-fluid">
       <div class="row no-gutter align-items-center position-relative">
         <div class="col">
-          <div class="header-action off-canvas-wrapper-btn-style2">
-            <button class="btn-menu btn-menu-dark" type="button"><i class="lastudioicon-menu-4-1"></i></button>
-          </div>
+            <div class="header-action off-canvas-wrapper-btn-style2">
+                <button class="btn-menu btn-menu-dark" type="button"><i class="lastudioicon-menu-4-1"></i></button>
+              </div>
           <div class="header-logo-area">
             <a href="index.html">
               <img class="logo-main" src="assets/img/logo-white.png" alt="Logo" />
               <img class="logo" src="assets/img/logo.png" alt="Logo" />
             </a>
           </div>
-          <div class="aside-menu-wrap-btn">
 
-          </div>
         </div>
         <div class="col">
           <div class="header-navigation-area">
@@ -94,17 +155,14 @@
               <li class=""><a href="/"><span>Home</span></a>
               <li class="has-submenu"><a href=""><span>Our Work</span></a>
                 <ul class="submenu-nav">
-                   <li><a href="/film.html">Film</a></li>
                   <li><a href="/ads-film.html">Ad Film</a></li>
-
+                  <li><a href="/film.html">Film</a></li>
                   <li><a href="/music-video.html">Music Video</a></li>
                   <li><a href="/portfolio.html">Photography</a></li>
                 </ul>
               </li>
               <li><a href="/services.html"><span>Our Services</span></a></li>
               <li><a href="/contact.html"><span>Contact Us</span></a></li>
-
-
             </ul>
           </div>
         </div>
@@ -114,240 +172,58 @@
   </header>
   <!--== End Header Wrapper ==-->
 
-  <main class="main-content">
-    <!--== Start Hero Area Wrapper ==-->
-    <section class="service-page-title-area parallax" data-speed="1.123" data-bg-img="assets/img/photos/bg7.jpg">
-      <div class="container pt--0 pb--0">
+  <main class="main-content">    <!--== Start Page Header Area Wrapper ==-->
+    <div class="page-header-area">
+      <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="service-page-title-content">
-              <div class="content">
-                <h4 class="title">Our Services</h4>
-                <p>Committed to superior quality and results</p>
-              </div>
+            <div class="page-header-content">
+              <h2 class="title" data-aos="fade-down" data-aos-duration="1000">Films</h2>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!--== End Hero Area Wrapper ==-->
+    </div>
+    <!--== End Page Header Area Wrapper ==-->
 
-    <!--== Start Service Area Wrapper ==-->
-    <section class="service-area">
-      <div class="container pt--0 pb--0">
-        <div class="row service-items-style3 masonry-grid">
-          <div class="col-lg-6">
-            <!--== Start Service Item ==-->
-            <div class="service-item">
-              <div class="inner-content">
-                <div class="thumb">
-                  <img src="assets/img/service/2.jpg" alt="Image-HasTech">
-                </div>
-                <div class="content">
-                  <h4 class="title">Concept Development</h4>
-                  <spam style="color:white;">
-                    <br>
-                  <li>Ideating and crafting creative concepts for advertisements. </li>
-                  <li>Aligning ideas with the brand’s messaging and target audience.</li>
-                  <li>Developing scripts, storylines, and themes for ad campaigns.</li>
-                </spam>
-                </div>
-                <a class="service-banner-link" href="services.html"></a>
-              </div>
-            </div>
-            <!--== End Service Item ==-->
+    <!--== Start Portfolios Area Wrapper ==-->
+    <section class="portfolio-area portfolio-masonry-area portfolio-inner-area">
+      <div class="container pb--0">
+        <div class="row">
+          <div class="col-12">
+
           </div>
-          <div class="col-lg-6">
-            <!--== Start Service Item ==-->
-            <div class="service-item">
-              <div class="inner-content">
-                <div class="thumb">
-                  <img src="assets/img/service/1.jpg" alt="Image-HasTech">
-                </div>
-                <div class="content">
-                  <h4 class="title">Pre-Production Services</h4>
-                  <span style="color:white;">
-                    <li>Visualizing the entire ad with sketches or digital storyboards.</li>
-                    <li>Selecting the right actors, models, or voiceover artists for the campaign.</li>
-                    <li>Finding ideal locations that fit the creative vision.</li>
-                    <li>Designing sets and props to match the brand aesthetic.</li>
-                    <li>Preparing shooting schedules, logistics, and crew management.</li>
-                  </span>
-
-                </div>
-                <a class="service-banner-link" href="services.html"></a>
-              </div>
-            </div>
-            <!--== End Service Item ==-->
-          </div>
-          <div class="col-lg-6">
-            <!--== Start Service Item ==-->
-            <div class="service-item">
-              <div class="inner-content">
-                <div class="thumb">
-                  <img src="assets/img/service/3.jpg" alt="Image-HasTech">
-                </div>
-                <div class="content">
-                  <h4 class="title">Production Services</h4>
-                  <span style="color:white;">
-                    <li>Filming the advertisement using professional equipment.</li>
-                    <li>Cinematography with high-quality visuals tailored for various platforms.</li>
-                    <li>On-set direction to ensure every shot aligns with the concept and brand vision.</li>
-                    <li>Use of drones, special effects, and advanced filming techniques, if required.</li>
-                  </span>
-
-                </div>
-                <a class="service-banner-link" href="services.html"></a>
-              </div>
-            </div>
-            <!--== End Service Item ==-->
-          </div>
-          <div class="col-lg-6">
-            <!--== Start Service Item ==-->
-            <div class="service-item">
-              <div class="inner-content">
-                <div class="thumb">
-                  <img src="assets/img/service/4.jpg" alt="Image-HasTech">
-                </div>
-                <div class="content">
-                  <h4 class="title">Post-Production Services</h4>
-                  <span style="color:white;">
-                    <li>Video Editing: Assembling footage to create a polished, engaging ad.</li>
-                    <li>Color Grading: Enhancing visuals with professional-grade color correction.</li>
-                    <li>Sound Design: Adding sound effects, background music, and voiceovers.</li>
-                    <li>Visual Effects (VFX): Adding special effects or animations for dynamic storytelling.</li>
-                    <li>Motion Graphics: Creating dynamic titles, infographics, or brand animations.</li>
-                  </span>
-
-                </div>
-                <a class="service-banner-link" href="services.html"></a>
-              </div>
-            </div>
-            <!--== End Service Item ==-->
-          </div>
-          <div class="col-lg-6">
-            <!--== Start Service Item ==-->
-            <div class="service-item">
-              <div class="inner-content">
-                <div class="thumb">
-                  <img src="assets/img/service/6.jpg" alt="Image-HasTech">
-                </div>
-                <div class="content">
-                  <h4 class="title">Advertising for Various Platforms</h4>
-                  <span style="color:white;">
-                    <li>Television Ads: Creating cinematic-quality commercials for TV audiences.</li>
-                    <li>Digital Ads: Short ads optimized for platforms like YouTube, Instagram, and Facebook.</li>
-                    <li>OTT Platforms: High-quality ads for streaming services (e.g., Netflix, Hulu).</li>
-                    <li>Corporate Films: Videos that showcase brand values, history, or achievements.</li>
-                  </span>
-
-                </div>
-                <a class="service-banner-link" href="services.html"></a>
-              </div>
-            </div>
-            <!--== End Service Item ==-->
-          </div>
-
-
-          <div class="col-lg-6">
-            <!--== Start Service Item ==-->
-            <div class="service-item">
-              <div class="inner-content">
-                <div class="thumb">
-                  <img src="assets/img/service/11.png" alt="Image-HasTech">
-                </div>
-                <div class="content">
-                  <h4 class="title">Brand-Specific Campaigns</h4>
-                  <span style="color:white;">
-                    <li>Product Launch Videos: Ads tailored to introduce new products or services.</li>
-                    <li>Event Coverage: Ad films promoting brand events or campaigns.</li>
-                    <li>Testimonial Videos: Highlighting customer experiences and reviews.</li>
-                  </span>
-
-                </div>
-                <a class="service-banner-link" href="services.html"></a>
-              </div>
-            </div>
-            <!--== End Service Item ==-->
-          </div>
-
-
-
-
-
-          <div class="col-lg-6">
-            <!--== Start Service Item ==-->
-            <div class="service-item">
-              <div class="inner-content">
-                <div class="thumb">
-                  <img src="assets/img/service/8.jpg" alt="Image-HasTech">
-                </div>
-                <div class="content">
-                  <h4 class="title">Talent and Crew Management </h4>
-                  <span style="color:white;">
-                    <li>Providing skilled crew members like directors, cinematographers, stylists, and editors.</li>
-                    <li>Hiring professional models or influencers to feature in ads.</li>
-                  </span>
-
-
-                </div>
-                <a class="service-banner-link" href="services.html"></a>
-              </div>
-            </div>
-            <!--== End Service Item ==-->
-          </div>
-
-
-          <div class="col-lg-6">
-            <!--== Start Service Item ==-->
-            <div class="service-item">
-              <div class="inner-content">
-                <div class="thumb">
-                  <img src="assets/img/service/9.jpg" alt="Image-HasTech">
-                </div>
-                <div class="content">
-                  <h4 class="title">Aerial and Specialty Filming </h4>
-                  <span style="color:white;">
-                    <li>Drone footage for unique perspectives in commercials.</li>
-                    <li>Slow-motion, time-lapse, or 360-degree filming.</li>
-                  </span>
-
-
-
-                </div>
-                <a class="service-banner-link" href="services.html"></a>
-              </div>
-            </div>
-            <!--== End Service Item ==-->
-          </div>
-
-
-
         </div>
       </div>
-    </section>
-    <!--== End Service Area Wrapper ==-->
-
-    <!--== Start Contact Area Wrapper ==-->
-    <section class="contact-area">
       <div class="container pt--0">
-        <div class="row divider-style6-wrap">
-          <div class="col-lg-4">
-            <div class="divider-content">
-              <div class="section-title section-title-style4 mb--0" data-aos="fade-up" data-aos-offset="50">
-                <h2 class="title">Let’s Talk</h2>
-                <div class="desc mb--0">
-                  <a href="contact.html">Contact Us</a>
-                </div>
+        <div class="row row-cols-xl-1 row-cols-md-1 row-cols-sm-1 row-cols-xs-1 row-gutter-30">
+        <!--== Start Portfolio Item Magazine ==-->
+
+        <div class="col Music">
+          <div class="video-container">
+            <div id="videoThumbnail" class="thumbnail-overlay" style="background-image: url('assets/img/portfolio/thumbnail4.webp');">
+              <div class="play-button">
+                <i class="fa fa-play"></i>
               </div>
             </div>
+            <iframe id="youtubeVideo" class="portfolio-video" src="https://www.youtube.com/embed/8CBbCrCPaxw?enablejsapi=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-info">
+              <h3>Official Film</h3>
+              <p>Directed and produced by RAYYROOM Films</p>
+            </div>
           </div>
+        </div>
+
+        <!--== End Portfolio Item Magazine==-->
+
 
         </div>
+
       </div>
     </section>
-    <!--== End Contact Area Wrapper ==-->
+    <!--== End Portfolios Area Wrapper ==-->
   </main>
+
 
   <!--== Start Footer Area Wrapper ==-->
   <footer class="footer-area">
@@ -444,6 +320,7 @@
   <div id="scroll-to-top" class="scroll-to-top"><span class="fa fa-angle-up"></span></div>
 
 
+
   <!--== Start Side Menu ==-->
   <aside class="off-canvas-wrapper">
     <div class="off-canvas-inner">
@@ -472,7 +349,9 @@
 
 
 
+  <!--== Start Aside Search Menu ==-->
 
+  <!--== End Aside Search Menu ==-->
 </div>
 
 <!--=======================Javascript============================-->
@@ -512,6 +391,29 @@
 
 <!--=== jQuery Custom Js ===-->
 <script src="assets/js/custom.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+<script>
+  // Video thumbnail overlay functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const thumbnail = document.getElementById('videoThumbnail');
+    const video = document.getElementById('youtubeVideo');
+    
+    if (thumbnail && video) {
+      thumbnail.addEventListener('click', function() {
+        // Hide the thumbnail overlay
+        thumbnail.style.opacity = 0;
+        thumbnail.style.pointerEvents = 'none';
+        
+        // Start the video (by appending autoplay=1 to the src)
+        const videoSrc = video.src;
+        video.src = videoSrc.includes('?') 
+          ? videoSrc.replace('?', '?autoplay=1&') 
+          : videoSrc + '?autoplay=1';
+      });
+    }
+  });
+</script>
 
 </body>
 
