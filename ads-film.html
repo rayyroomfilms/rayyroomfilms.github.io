@@ -7,8 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>RAYYROOM Films</title>
-    <meta name="description" content="Rayyroom Films: Crafting captivating cinematic experiences with innovation and social consciousness. Explore our portfolio and join us for unforgettable journeys. Lights, camera, action!">
-	<meta property="og:title" content="Rayyroom Films">
+    <meta name="description" content="Rayyroom Films: Crafting captivating cinematic experiences with innovation and social consciousness. Explore our portfolio and join us for unforgettable journeys. Lights, camera,         <div class="col Music">
+            <div class="portfolio-item-video" data-video="973889694" data-platform="vimeo">
+                <div class="video-thumbnail">
+                    <img src="https://vumbnail.com/973889694.jpg" alt="Ad Film 2" class="portfolio-video">
+                    <div class="play-overlay">
+                        <img src="assets/img/icons/play.png" alt="Play" class="play-icon">
+                    </div>
+                </div>
+                <div class="video-credit">
+                    <p class="credit-text"><i class="fa fa-video-camera"></i> Directed by: <strong>Bhupesh Kalal</strong></p>
+                </div>
+            </div>
+        </div>meta property="og:title" content="Rayyroom Films">
 	<meta property="og:description" content="Crafting captivating cinematic experiences with innovation and social consciousness. Join us for unforgettable journeys. Lights, camera, action!">
 	<meta property="og:image" content="https://rayyroomfilms.com/assets/img/logo.png">
 	<meta property="og:type" content="website">
@@ -45,7 +56,316 @@
     <!--== Main Style CSS ==-->
     <link href="assets/css/style.css" rel="stylesheet" />
 
-    <!--[if lt IE 9]>
+    <!--== Custom Video Credit Styles ==-->
+    <style>
+        /* Force 4-column layout on desktop */
+        @media (min-width: 992px) {
+            .portfolio-area .row > .col {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            .portfolio-area .row > .col {
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+        }
+
+        @media (min-width: 576px) and (max-width: 767px) {
+            .portfolio-area .row > .col {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .portfolio-area .row > .col {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .portfolio-item-video {
+            position: relative;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #1a1a1a;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .portfolio-item-video:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .portfolio-video {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: none;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 1;
+            display: block;
+        }
+
+        .portfolio-item-video:hover .portfolio-video {
+            transform: scale(1.05);
+        }
+
+        .video-credit {
+            background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+            padding: 12px 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-credit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+            background-size: 400% 400%;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .credit-text {
+            margin: 0;
+            font-size: 13px;
+            color: #e0e0e0;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.3px;
+        }
+
+        .credit-text i {
+            color: #feca57;
+            font-size: 14px;
+            background: linear-gradient(45deg, #feca57, #ff9ff3);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: iconPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes iconPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .credit-text strong {
+            color: #ffffff;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #ffffff, #f8f9fa);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Film strip effect */
+        .portfolio-item-video::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -3px;
+            width: 6px;
+            background:
+                repeating-linear-gradient(
+                    90deg,
+                    #333 0px,
+                    #333 1px,
+                    transparent 1px,
+                    transparent 3px
+                );
+            z-index: 2;
+            opacity: 0.7;
+        }
+
+        .portfolio-item-video::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -3px;
+            width: 6px;
+            background:
+                repeating-linear-gradient(
+                    90deg,
+                    #333 0px,
+                    #333 1px,
+                    transparent 1px,
+                    transparent 3px
+                );
+            z-index: 2;
+            opacity: 0.7;
+        }
+
+        /* Play button overlay effect */
+        .portfolio-item-video .play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            /* background: rgba(255, 255, 255, 0.9); */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+            z-index: 3;
+
+        }
+
+        .portfolio-item-video:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-overlay img.play-icon {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+        }
+
+        /* Responsive adjustments for 4-column layout */
+        @media (max-width: 1200px) {
+            .portfolio-video {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .portfolio-video {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-video {
+                height: 200px;
+            }
+
+            .video-credit {
+                padding: 10px 12px;
+            }
+
+            .credit-text {
+                font-size: 12px;
+                gap: 6px;
+            }
+
+            .portfolio-item-video {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .portfolio-video {
+                height: 180px;
+            }
+
+            .credit-text {
+                font-size: 11px;
+                gap: 5px;
+            }
+
+            .play-overlay {
+                width: 70px;
+                height: 70px;
+            }
+
+            .play-overlay img.play-icon {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        /* Video Modal Styles */
+        .video-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+        }
+
+        .video-modal-content {
+            position: relative;
+            margin: 5% auto;
+            width: 90%;
+            max-width: 1200px;
+            height: 80vh;
+        }
+
+        .video-modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10000;
+            transition: color 0.3s ease;
+        }
+
+        .video-modal-close:hover {
+            color: #ff6b6b;
+        }
+
+        .video-modal-body {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-modal-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .video-modal-content {
+                margin: 10% auto;
+                width: 95%;
+                height: 60vh;
+            }
+        }
+    </style>    <!--[if lt IE 9]>
     <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -133,7 +453,7 @@
         </div>
       </div>
       <div class="container pt--0">
-        <div class="row row-cols-xl-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 row-gutter-30">
+        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1 row-gutter-20">
 
 
 
@@ -141,37 +461,147 @@
         <!--== Start Portfolio Item Magazine ==-->
 
         <div class="col Music">
-            <iframe class="portfolio-video" src="https://www.youtube.com/embed/9WsqFeW5wsg"> </iframe>
+            <div class="portfolio-item-video" data-video="9WsqFeW5wsg">
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/9WsqFeW5wsg/maxresdefault.jpg" alt="Ad Film 1" class="portfolio-video">
+                    <div class="play-overlay">
+                        <img src="assets/img/icons/play-button.png" alt="Play" class="play-icon">
+                    </div>
+                </div>
+                <div class="video-credit">
+                    <p class="credit-text"><i class="fa fa-video-camera"></i> Directed by: <strong>Bhupesh Kalal</strong></p>
+                </div>
+            </div>
         </div>
         <div class="col Music">
-            <iframe class="portfolio-video" src="https://www.youtube.com/embed/EQ5raxwTpsM"> </iframe>
+            <div class="portfolio-item-video" data-video="EQ5raxwTpsM">
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/EQ5raxwTpsM/maxresdefault.jpg" alt="Ad Film 2" class="portfolio-video">
+                    <div class="play-overlay">
+                        <img src="assets/img/icons/play-button.png" alt="Play" class="play-icon">
+                    </div>
+                </div>
+                <div class="video-credit">
+                    <p class="credit-text"><i class="fa fa-video-camera"></i> Directed by: <strong>Bhupesh Kalal</strong></p>
+                </div>
+            </div>
         </div>
         <div class="col Music">
-            <iframe class="portfolio-video" src="https://www.youtube.com/embed/bdxK9f8Ssrw"> </iframe>
+            <div class="portfolio-item-video" data-video="bdxK9f8Ssrw">
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/bdxK9f8Ssrw/maxresdefault.jpg" alt="Ad Film 3" class="portfolio-video">
+                    <div class="play-overlay">
+                        <img src="assets/img/icons/play-button.png" alt="Play" class="play-icon">
+                    </div>
+                </div>
+                <div class="video-credit">
+                    <p class="credit-text"><i class="fa fa-video-camera"></i> Directed by: <strong>Bhupesh Kalal</strong></p>
+                </div>
+            </div>
         </div>
         <div class="col Music">
-            <iframe class="portfolio-video" src="https://www.youtube.com/embed/nCMqZwBH9_Q"> </iframe>
+            <div class="portfolio-item-video" data-video="nCMqZwBH9_Q">
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/nCMqZwBH9_Q/maxresdefault.jpg" alt="Ad Film 4" class="portfolio-video">
+                    <div class="play-overlay">
+                        <img src="assets/img/icons/play-button.png" alt="Play" class="play-icon">
+                    </div>
+                </div>
+                <div class="video-credit">
+                    <p class="credit-text"><i class="fa fa-video-camera"></i> Directed by: <strong>Bhupesh Kalal</strong></p>
+                </div>
+            </div>
         </div>
         <div class="col Music">
-            <iframe class="portfolio-video" src="https://www.youtube.com/embed/136B6OSOe4c"> </iframe>
+            <div class="portfolio-item-video" data-video="136B6OSOe4c">
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/136B6OSOe4c/maxresdefault.jpg" alt="Ad Film 5" class="portfolio-video">
+                    <div class="play-overlay">
+                        <img src="assets/img/icons/play-button.png" alt="Play" class="play-icon">
+                    </div>
+                </div>
+                <div class="video-credit">
+                    <p class="credit-text"><i class="fa fa-video-camera"></i> Directed by: <strong>Bhupesh Kalal</strong></p>
+                </div>
+            </div>
         </div>
         <div class="col Music">
-            <iframe class="portfolio-video" src="https://www.youtube.com/embed/SPVA5CCgC50"> </iframe>
+            <div class="portfolio-item-video" data-video="SPVA5CCgC50">
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/SPVA5CCgC50/maxresdefault.jpg" alt="Ad Film 6" class="portfolio-video">
+                    <div class="play-overlay">
+                        <img src="assets/img/icons/play-button.png" alt="Play" class="play-icon">
+                    </div>
+                </div>
+                <div class="video-credit">
+                    <p class="credit-text"><i class="fa fa-video-camera"></i> Directed by: <strong>Bhupesh Kalal</strong></p>
+                </div>
+            </div>
         </div>
         <div class="col Music">
-            <iframe class="portfolio-video" src="https://www.youtube.com/embed/x7HM3XPYT1Y"> </iframe>
+            <div class="portfolio-item-video" data-video="x7HM3XPYT1Y">
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/x7HM3XPYT1Y/maxresdefault.jpg" alt="Ad Film 7" class="portfolio-video">
+                    <div class="play-overlay">
+                        <img src="assets/img/icons/play-button.png" alt="Play" class="play-icon">
+                    </div>
+                </div>
+                <div class="video-credit">
+                    <p class="credit-text"><i class="fa fa-video-camera"></i> Directed by: <strong>Bhupesh Kalal</strong></p>
+                </div>
+            </div>
         </div>
         <div class="col Music">
-            <iframe class="portfolio-video" src="https://www.youtube.com/embed/L5M6RnIWZ7g"> </iframe>
+            <div class="portfolio-item-video" data-video="L5M6RnIWZ7g">
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/L5M6RnIWZ7g/maxresdefault.jpg" alt="Ad Film 8" class="portfolio-video">
+                    <div class="play-overlay">
+                        <img src="assets/img/icons/play-button.png" alt="Play" class="play-icon">
+                    </div>
+                </div>
+                <div class="video-credit">
+                    <p class="credit-text"><i class="fa fa-video-camera"></i> Directed by: <strong>Bhupesh Kalal</strong></p>
+                </div>
+            </div>
         </div>
         <div class="col Music">
-            <iframe class="portfolio-video" src="https://www.youtube.com/embed/_orPNQWhDgM"> </iframe>
+            <div class="portfolio-item-video" data-video="_orPNQWhDgM">
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/_orPNQWhDgM/maxresdefault.jpg" alt="Ad Film 9" class="portfolio-video">
+                    <div class="play-overlay">
+                        <img src="assets/img/icons/play-button.png" alt="Play" class="play-icon">
+                    </div>
+                </div>
+                <div class="video-credit">
+                    <p class="credit-text"><i class="fa fa-video-camera"></i> Directed by: <strong>Bhupesh Kalal</strong></p>
+                </div>
+            </div>
         </div>
         <div class="col Music">
-            <iframe class="portfolio-video" src="https://www.youtube.com/embed/JdiafSKCoLU"> </iframe>
+            <div class="portfolio-item-video" data-video="JdiafSKCoLU">
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/JdiafSKCoLU/maxresdefault.jpg" alt="Ad Film 10" class="portfolio-video">
+                    <div class="play-overlay">
+                        <img src="assets/img/icons/play-button.png" alt="Play" class="play-icon">
+                    </div>
+                </div>
+                <div class="video-credit">
+                    <p class="credit-text"><i class="fa fa-video-camera"></i> Directed by: <strong>Bhupesh Kalal</strong></p>
+                </div>
+            </div>
         </div>
         <div class="col Music">
-            <iframe class="portfolio-video" src="https://www.youtube.com/embed/oj8wmfCGfjw"> </iframe>
+            <div class="portfolio-item-video" data-video="oj8wmfCGfjw">
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/oj8wmfCGfjw/maxresdefault.jpg" alt="Ad Film 11" class="portfolio-video">
+                    <div class="play-overlay">
+                        <img src="assets/img/icons/play-button.png" alt="Play" class="play-icon">
+                    </div>
+                </div>
+                <div class="video-credit">
+                    <p class="credit-text"><i class="fa fa-video-camera"></i> Directed by: <strong>Bhupesh Kalal</strong></p>
+                </div>
+            </div>
         </div>
 
 
@@ -278,6 +708,17 @@
   </footer>
   <!--== End Footer Area Wrapper ==-->
 
+  <!--== Video Modal ==-->
+  <div id="videoModal" class="video-modal">
+    <div class="video-modal-content">
+      <span class="video-modal-close">&times;</span>
+      <div class="video-modal-body">
+        <iframe id="modalVideo" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <!--== End Video Modal ==-->
+
   <!--== Scroll Top Button ==-->
   <div id="scroll-to-top" class="scroll-to-top"><span class="fa fa-angle-up"></span></div>
 
@@ -354,6 +795,53 @@
 <!--=== jQuery Custom Js ===-->
 <script src="assets/js/custom.js"></script>
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+<!--=== Video Modal JavaScript ===-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    const closeBtn = document.querySelector('.video-modal-close');
+    const videoItems = document.querySelectorAll('.portfolio-item-video');
+
+    // Open modal when video thumbnail is clicked
+    videoItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const videoId = this.getAttribute('data-video');
+            const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+
+            modalVideo.src = embedUrl;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+    });
+
+    // Close modal when X is clicked
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+        modalVideo.src = '';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    });
+
+    // Close modal when clicking outside the video
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            modalVideo.src = '';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+            modalVideo.src = '';
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
+</script>
 
 </body>
 
